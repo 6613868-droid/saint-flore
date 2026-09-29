@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saint Flore — авторские букеты с доставкой по Санкт-Петербургу</title>
+<meta name="description" content="Цветочная студия Saint Flore: авторские букеты, монобукеты, корзины и композиции. Доставка по СПб за 2 часа, фото перед вручением, гарантия свежести. Промокод SAINT10 — минус 10%.">
+<meta property="og:title" content="Saint Flore — букеты, которые скажут за вас">
+<meta property="og:description" content="Авторская флористика в СПб. Доставка за 2 часа, фото перед вручением, гарантия свежести.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💐</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF6F0; --blush:#F3E7E1; --card:#FFFFFF;
+  --ink:#33222A; --muted:#8A737B;
+  --plum:#47222F; --plum-2:#5C2E3E;
+  --rose:#C4707F; --rose-2:#A9596A;
+  --gold:#B9975B;
+  --line:#E7DCD6;
+  --shadow-sm:0 2px 12px rgba(71,34,47,.06);
+  --shadow-md:0 14px 40px rgba(71,34,47,.12);
+  --shadow-lg:0 30px 70px rgba(71,34,47,.16);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+input,select,textarea{font-family:inherit;font-size:15px}
+::selection{background:var(--rose);color:#fff}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.12;letter-spacing:-.01em}
+section{scroll-margin-top:92px}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ===== элементы ===== */
+.label{display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
+.label::before{content:"";width:34px;height:1px;background:var(--rose)}
+.sec-title{font-size:clamp(34px,4.6vw,54px)}
+.sec-sub{color:var(--muted);max-width:620px;margin-top:14px;font-size:16.5px}
+.sec-head{margin-bottom:52px}
+.sec-head.center{text-align:center}
+.sec-head.center .sec-sub{margin-left:auto;margin-right:auto}
+.sec-head.center .label{justify-content:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 32px;border-radius:999px;font-weight:700;font-size:15px;letter-spacing:.02em;transition:all .25s ease;white-space:nowrap}
+.btn-solid{background:var(--rose);color:#fff;box-shadow:0 12px 28px rgba(196,112,127,.35)}
+.btn-solid:hover{background:var(--rose-2);transform:translateY(-2px)}
+.btn-line{border:1.5px solid var(--plum);color:var(--plum);background:transparent}
+.btn-line:hover{background:var(--plum);color:#fff;transform:translateY(-2px)}
+.btn-line-light{border:1.5px solid rgba(255,255,255,.55);color:#fff;background:transparent;backdrop-filter:blur(4px)}
+.btn-line-light:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== header ===== */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .3s ease}
+header.scrolled{background:rgba(250,246,240,.94);backdrop-filter:blur(14px);box-shadow:0 4px 24px rgba(71,34,47,.07)}
+.header-in{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+.logo{display:flex;align-items:baseline;gap:2px;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--plum);transition:color .3s}
+header.light .logo{color:#fff}
+.logo em{font-style:italic;color:var(--rose)}
+nav{display:flex;gap:30px}
+nav a{font-size:14.5px;font-weight:600;color:rgba(255,255,255,.85);transition:color .2s;position:relative}
+header:not(.light) nav a{color:var(--ink)}
+nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1.5px;background:var(--rose);transition:width .25s}
+nav a:hover::after{width:100%}
+header.scrolled nav a{color:var(--ink)}
+.header-act{display:flex;align-items:center;gap:16px}
+.header-phone{display:flex;align-items:center;gap:8px;font-weight:800;font-size:15px;color:#fff;transition:color .3s}
+header:not(.light) .header-phone{color:var(--plum)}
+.header-phone svg{width:16px;height:16px;color:var(--rose)}
+.cart-btn{position:relative;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;transition:all .25s;border:1.5px solid rgba(255,255,255,.4);color:#fff}
+header:not(.light) .cart-btn{border-color:var(--line);color:var(--plum)}
+header.scrolled .cart-btn{border-color:var(--line);color:var(--plum)}
+.cart-btn svg{width:20px;height:20px}
+.cart-btn:hover{transform:translateY(-2px)}
+.cart-count{position:absolute;top:-4px;right:-4px;min-width:20px;height:20px;padding:0 5px;border-radius:10px;background:var(--rose);color:#fff;font-size:11.5px;font-weight:800;display:grid;place-items:center}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1.5px solid rgba(255,255,255,.4);place-items:center;cursor:pointer;color:#fff}
+header:not(.light) .burger{border-color:var(--line);color:var(--plum)}
+.burger span{display:block;width:20px;height:2px;background:currentColor;margin:2.5px 0;border-radius:2px}
+
+/* ===== hero ===== */
+.hero{position:relative;padding:170px 0 110px;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-220px;right:-180px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(196,112,127,.14),transparent 65%)}
+.hero::after{content:"";position:absolute;bottom:-260px;left:-200px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(185,151,91,.12),transparent 65%)}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+.hero-chip{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.7);color:var(--ink);font-size:13px;font-weight:700;margin-bottom:28px}
+.hero-chip b{color:var(--rose)}
+.hero h1{font-size:clamp(46px,6.4vw,86px);margin-bottom:24px}
+.hero h1 em{font-style:italic;color:var(--rose)}
+.hero-sub{color:var(--muted);font-size:18px;max-width:480px;margin-bottom:36px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.hero-trust{display:flex;border-top:1px solid var(--line);padding-top:24px;max-width:520px}
+.htrust{flex:1;padding-right:20px}
+.htrust+.htrust{padding-left:20px;border-left:1px solid var(--line)}
+.htrust b{display:block;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--plum)}
+.htrust span{font-size:12.5px;color:var(--muted);line-height:1.4;display:block}
+.hero-photo{position:relative;z-index:2}
+.hero-photo .main{width:100%;height:560px;object-fit:cover;object-position:center 30%;border-radius:200px 200px 28px 28px;box-shadow:var(--shadow-lg)}
+.hero-badge{position:absolute;top:30px;right:-14px;background:#fff;border-radius:999px;padding:11px 20px;box-shadow:var(--shadow-md);display:flex;gap:10px;align-items:center;transform:rotate(2deg)}
+.hero-badge .ic{width:34px;height:34px;border-radius:50%;background:var(--blush);display:grid;place-items:center;color:var(--rose-2);flex:none}
+.hero-badge b{display:block;font-size:13.5px;line-height:1.25}
+.hero-disc{position:absolute;left:6px;bottom:40px;width:112px;height:112px;border-radius:50%;background:var(--plum);color:#fff;display:grid;place-items:center;text-align:center;font-size:11.5px;font-weight:800;letter-spacing:.1em;line-height:1.45;transform:rotate(-8deg);box-shadow:var(--shadow-md);text-transform:uppercase}
+.hero-disc em{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;letter-spacing:0;text-transform:none;color:#EFC9CF}
+
+/* ===== strip работ ===== */
+.strip-wrap{padding:0 0 100px}
+.strip-label{text-align:center;margin-bottom:26px}
+.strip{overflow:hidden;position:relative}
+.strip::before,.strip::after{content:"";position:absolute;top:0;bottom:0;width:90px;z-index:2;pointer-events:none}
+.strip::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
+.strip::after{right:0;background:linear-gradient(-90deg,var(--bg),transparent)}
+.strip-track{display:flex;gap:18px;width:max-content;animation:slide 80s linear infinite}
+.strip:hover .strip-track{animation-play-state:paused}
+.strip-track img{height:230px;width:auto;border-radius:16px;box-shadow:var(--shadow-sm)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ===== benefits ===== */
+.benefits{padding:40px 0 100px}
+.ben-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ben{text-align:center;padding:34px 24px;background:var(--card);border:1px solid var(--line);border-radius:22px;transition:all .3s ease}
+.ben:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:transparent}
+.ben .ic{width:56px;height:56px;margin:0 auto 18px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--rose-2)}
+.ben .ic svg{width:26px;height:26px}
+.ben h3{font-family:'Manrope',sans-serif;font-weight:800;font-size:15.5px;margin-bottom:7px;letter-spacing:0}
+.ben p{font-size:13.5px;color:var(--muted)}
+
+/* ===== categories ===== */
+.cats{padding:100px 0;background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cats-in{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+.cat-list{display:grid}
+.cat-row{display:flex;align-items:baseline;gap:16px;padding:22px 6px;border-bottom:1px solid var(--line);cursor:pointer;transition:all .25s}
+.cat-row:first-child{border-top:1px solid var(--line)}
+.cat-row b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:30px;transition:color .25s}
+.cat-row small{color:var(--muted);font-size:13px;font-weight:600}
+.cat-row .arr{margin-left:auto;color:var(--rose);font-size:20px;transition:transform .25s}
+.cat-row:hover{padding-left:16px}
+.cat-row:hover b{color:var(--rose)}
+.cat-row:hover .arr{transform:translateX(6px)}
+.cat-photo{position:relative;justify-self:center}
+.cat-photo .pol{background:#fff;padding:14px 14px 48px;border-radius:6px;box-shadow:var(--shadow-lg);transform:rotate(5deg);transition:transform .4s}
+.cat-photo .pol img{width:330px;aspect-ratio:7/9;object-fit:cover;display:block}
+.cat-photo:hover .pol{transform:rotate(2deg) scale(1.02)}
+
+/* ===== catalog ===== */
+.catalog{padding:100px 0}
+.cat-toolbar{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.chips{display:flex;gap:10px;flex-wrap:wrap;flex:1}
+.chip{padding:10px 20px;border-radius:999px;border:1.5px solid var(--line);background:transparent;font-weight:700;font-size:14px;color:var(--ink);transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.chip small{font-weight:700;color:var(--muted);font-size:12px}
+.chip:hover{border-color:var(--plum)}
+.chip.active{background:var(--plum);border-color:var(--plum);color:#fff}
+.chip.active small{color:rgba(255,255,255,.65)}
+.tool-right{display:flex;gap:12px;align-items:center}
+.search{position:relative}
+.search input{padding:12px 16px 12px 42px;border:1.5px solid var(--line);border-radius:999px;background:#fff;width:230px;outline:none;transition:border .2s;font-weight:500}
+.search input:focus{border-color:var(--plum)}
+.search svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--muted)}
+.sort{padding:12px 18px;border:1.5px solid var(--line);border-radius:999px;background:#fff;outline:none;font-weight:600;color:var(--ink);cursor:pointer}
+.quiz-chip{display:none;align-items:center;gap:10px;padding:9px 10px 9px 18px;border-radius:999px;background:var(--plum);color:#fff;font-weight:800;font-size:13.5px;margin-bottom:22px;width:max-content}
+.quiz-chip.show{display:inline-flex}
+.quiz-chip button{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;font-weight:800;line-height:1}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.pcard{background:#fff;padding:10px 10px 18px;border:1px solid var(--line);border-radius:8px;display:flex;flex-direction:column;transition:all .3s ease;position:relative}
+.pcard:hover{transform:rotate(-1deg) translateY(-6px);box-shadow:var(--shadow-md)}
+.pcard-img{position:relative;overflow:hidden;border-radius:4px}
+.pcard-img img{width:100%;aspect-ratio:7/9;object-fit:cover;object-position:center 30%;transition:transform .6s ease}
+.pcard:hover .pcard-img img{transform:scale(1.05)}
+.ptag{position:absolute;top:12px;left:12px;padding:5px 12px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--rose);color:#fff;z-index:2}
+.ptag.hit{background:var(--plum)}
+.ptag.new{background:var(--gold);color:#3B2E05}
+.pfav{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;z-index:2;transition:transform .2s;box-shadow:var(--shadow-sm)}
+.pfav:hover{transform:scale(1.1)}
+.pfav svg{width:17px;height:17px;color:#C9B6BC;transition:color .2s}
+.pfav.on svg{color:var(--rose);fill:var(--rose)}
+.pcard-b{padding:14px 6px 0;display:flex;flex-direction:column;flex:1}
+.pcard h3{font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;line-height:1.35}
+.pcard .lat{font-size:12.5px;color:var(--muted);margin-top:4px;min-height:18px}
+.pmeta{display:flex;gap:12px;margin-top:8px;font-size:12px;color:var(--muted)}
+.pmeta span{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.pmeta svg{width:13px;height:13px;color:var(--rose-2)}
+.prow{display:flex;align-items:center;justify-content:space-between;margin-top:12px;gap:8px}
+.price{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:24px;color:var(--plum)}
+.price s{color:#C9B6BC;font-weight:500;font-size:15px;margin-left:7px}
+.add{height:38px;padding:0 16px;border-radius:999px;border:1.5px solid var(--plum);color:var(--plum);font-weight:800;font-size:12.5px;letter-spacing:.04em;transition:all .25s;display:inline-flex;align-items:center;gap:6px}
+.add svg{width:14px;height:14px}
+.add:hover{background:var(--plum);color:#fff}
+.add.in{background:var(--plum);color:#fff}
+.more-wrap{text-align:center;margin-top:44px}
+.grid-empty{padding:60px 20px;text-align:center;color:var(--muted);grid-column:1/-1;font-size:17px}
+
+/* ===== quiz ===== */
+.quiz{position:relative;padding:110px 0;color:#fff;overflow:hidden;background:var(--plum)}
+.quiz::before{content:"";position:absolute;inset:0;background-image:url('img/crop/04.jpg');background-size:cover;background-position:center 30%;opacity:.16}
+.quiz .container{position:relative;z-index:2}
+.quiz-head{text-align:center;max-width:720px;margin:0 auto 46px}
+.quiz-head .label{color:#EFC9CF;justify-content:center}
+.quiz-head .label::before{background:#EFC9CF}
+.quiz-head h2{font-size:clamp(30px,4vw,48px)}
+.quiz-head h2 em{font-style:italic;color:#EFC9CF}
+.quiz-head p{color:rgba(255,255,255,.75);margin-top:14px}
+.quiz-card{max-width:680px;margin:0 auto;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:26px;padding:44px 48px;backdrop-filter:blur(8px)}
+.quiz-prog{height:4px;border-radius:2px;background:rgba(255,255,255,.15);margin-bottom:32px;overflow:hidden}
+.quiz-prog i{display:block;height:100%;width:0;background:var(--gold);border-radius:2px;transition:width .4s ease}
+.quiz-q{font-family:'Cormorant Garamond',serif;font-size:27px;margin-bottom:26px}
+.quiz-opts{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.qopt{padding:17px 20px;border-radius:16px;border:1.5px solid rgba(255,255,255,.22);background:rgba(255,255,255,.05);color:#fff;text-align:left;transition:all .2s;display:flex;flex-direction:column;gap:3px}
+.qopt b{font-size:15.5px}
+.qopt span{font-size:13px;color:rgba(255,255,255,.6)}
+.qopt:hover{border-color:#EFC9CF;background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.qopt.sel{border-color:#EFC9CF;background:rgba(185,151,91,.2)}
+.quiz-nav{display:flex;justify-content:space-between;margin-top:28px;align-items:center}
+.quiz-back{color:rgba(255,255,255,.6);font-weight:600;font-size:14px}
+.quiz-back:hover{color:#fff}
+.quiz-res{min-height:200px}
+.quiz-res-note{color:rgba(255,255,255,.75);font-size:14.5px;margin-bottom:20px}
+.qr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.qr-card{background:#fff;border-radius:14px;overflow:hidden;color:var(--ink)}
+.qr-card img{width:100%;aspect-ratio:7/8;object-fit:cover}
+.qr-card div{padding:12px 14px}
+.qr-card b{font-size:13px;display:block;line-height:1.3;font-family:'Manrope',sans-serif}
+.qr-card span{font-weight:800;font-size:14px;color:var(--plum)}
+
+/* ===== services ===== */
+.services{padding:100px 0}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.srv{position:relative;border-radius:24px;overflow:hidden;min-height:400px;display:flex;align-items:flex-end;color:#fff;box-shadow:var(--shadow-sm);transition:all .3s}
+.srv:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+.srv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s;filter:saturate(.9)}
+.srv:hover img{transform:scale(1.05)}
+.srv::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(42,20,28,.9) 10%,rgba(42,20,28,.15) 55%)}
+.srv div{position:relative;z-index:2;padding:28px}
+.srv h3{font-size:26px;margin-bottom:8px}
+.srv p{font-size:14px;color:rgba(255,255,255,.85);margin-bottom:14px}
+.srv a{font-weight:800;font-size:14px;color:#EFC9CF;display:inline-flex;align-items:center;gap:6px;transition:gap .2s}
+.srv a:hover{gap:10px}
+
+/* ===== steps ===== */
+.steps{padding:100px 0;background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.step-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.step{border-top:2px solid var(--line);padding-top:22px;transition:border-color .3s}
+.step:hover{border-top-color:var(--rose)}
+.step .num{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;color:var(--rose);line-height:1;margin-bottom:14px}
+.step h3{font-family:'Manrope',sans-serif;font-weight:800;font-size:16px;margin-bottom:7px}
+.step p{font-size:13.5px;color:var(--muted)}
+
+/* ===== delivery ===== */
+.delivery{padding:100px 0}
+.del-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:start}
+.tariff{display:flex;gap:16px;align-items:center;padding:20px 4px;border-bottom:1px solid var(--line)}
+.tariff:first-child{border-top:1px solid var(--line)}
+.tariff .ic{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--rose-2);flex:none}
+.tariff .ic svg{width:21px;height:21px}
+.tariff b{display:block;font-size:15.5px}
+.tariff span{font-size:13.5px;color:var(--muted)}
+.tariff .pr{margin-left:auto;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:22px;color:var(--plum);white-space:nowrap}
+.pay-note{background:var(--plum);color:#fff;border-radius:26px;padding:38px;position:relative;overflow:hidden}
+.pay-note::after{content:"💐";position:absolute;right:-14px;bottom:-24px;font-size:110px;opacity:.14;transform:rotate(-15deg)}
+.pay-note h3{font-size:27px;margin-bottom:16px}
+.pay-note ul{list-style:none;display:grid;gap:12px;margin-bottom:22px}
+.pay-note li{display:flex;gap:11px;font-size:14.5px;color:rgba(255,255,255,.9);align-items:flex-start}
+.pay-note li svg{width:18px;height:18px;color:var(--gold);flex:none;margin-top:2px}
+.pay-note .small{font-size:13px;color:rgba(255,255,255,.55)}
+
+/* ===== reviews ===== */
+.reviews{padding:100px 0;background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:48px;flex-wrap:wrap}
+.rev-score{display:flex;align-items:center;gap:16px;background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:18px 26px}
+.rev-score .big{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:var(--plum)}
+.rev-score .stars{color:var(--gold);letter-spacing:2px;font-size:16px}
+.rev-score span{display:block;font-size:13px;color:var(--muted)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rev{background:var(--bg);border:1px solid var(--line);border-radius:22px;padding:30px;display:flex;flex-direction:column;gap:16px;transition:all .3s;position:relative}
+.rev:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+.rev .q{font-family:'Cormorant Garamond',serif;font-size:64px;line-height:.6;color:var(--rose);height:26px}
+.rev .stars{color:var(--gold);font-size:14px;letter-spacing:2px}
+.rev p{font-size:14.5px;color:#4A3A40;flex:1}
+.rev-who{display:flex;align-items:center;gap:12px}
+.rev-who .ava{width:44px;height:44px;border-radius:50%;background:var(--blush);color:var(--plum);font-weight:800;display:grid;place-items:center;font-size:14px;flex:none}
+.rev-who b{display:block;font-size:14px}
+.rev-who span{font-size:12.5px;color:var(--muted)}
+
+/* ===== faq ===== */
+.faq{padding:100px 0}
+.faq-list{max-width:820px;margin:0 auto;display:grid;gap:12px}
+details{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:box-shadow .25s}
+details[open]{box-shadow:var(--shadow-sm);border-color:#EFC9CF}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 26px;font-weight:700;font-size:16px;cursor:pointer}
+summary::-webkit-details-marker{display:none}
+summary .pl{width:30px;height:30px;border-radius:50%;background:var(--blush);display:grid;place-items:center;flex:none;transition:transform .3s;font-weight:800;color:var(--plum)}
+details[open] .pl{transform:rotate(45deg);background:var(--plum);color:#fff}
+details p{padding:0 26px 24px;color:var(--muted);font-size:14.5px;max-width:700px}
+
+/* ===== lead ===== */
+.lead{padding:0 0 100px}
+.lead-card{background:linear-gradient(120deg,var(--plum) 50%,var(--plum-2));border-radius:30px;padding:64px 64px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;color:#fff;position:relative;overflow:hidden}
+.lead-card::before{content:"";position:absolute;right:-90px;top:-90px;width:300px;height:300px;border-radius:50%;background:rgba(196,112,127,.25)}
+.lead-card::after{content:"";position:absolute;right:70px;bottom:-110px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.06)}
+.lead-card h2{font-size:clamp(28px,3.6vw,44px);margin-bottom:14px}
+.lead-card h2 em{font-style:italic;color:#EFC9CF}
+.lead-card p{color:rgba(255,255,255,.8);font-size:15.5px;max-width:440px}
+.lead-form{position:relative;z-index:2;display:flex;gap:12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);padding:10px;border-radius:999px}
+.lead-form input{flex:1;background:transparent;border:none;outline:none;color:#fff;padding:8px 16px;font-size:15px;min-width:0}
+.lead-form input::placeholder{color:rgba(255,255,255,.55)}
+.lead-done{display:none;align-items:center;gap:12px;font-size:16px;font-weight:700}
+.lead-done .ok{width:44px;height:44px;border-radius:50%;background:var(--gold);color:#3B2E05;display:grid;place-items:center;flex:none}
+.lead-note{font-size:12.5px;color:rgba(255,255,255,.5);margin-top:14px;grid-column:2}
+
+/* ===== footer ===== */
+footer{background:var(--plum);color:rgba(255,255,255,.72);padding:76px 0 34px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:44px;margin-bottom:50px}
+.f-brand .logo{color:#fff;margin-bottom:16px}
+.f-brand p{font-size:14px;max-width:280px}
+.f-social{display:flex;gap:10px;margin-top:22px}
+.f-social a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;transition:all .25s}
+.f-social a:hover{background:var(--rose);border-color:var(--rose);transform:translateY(-3px)}
+.f-social svg{width:17px;height:17px}
+.f-col h4{color:#fff;font-size:15px;margin-bottom:18px;font-weight:800;font-family:'Manrope',sans-serif}
+.f-col a{display:block;font-size:14px;margin-bottom:11px;color:rgba(255,255,255,.66);transition:color .2s}
+.f-col a:hover{color:#EFC9CF}
+.f-contact div{display:flex;gap:11px;margin-bottom:15px;font-size:14px;align-items:flex-start}
+.f-contact svg{width:17px;height:17px;color:var(--gold);flex:none;margin-top:2px}
+.f-contact b{color:#fff;font-size:15px}
+.f-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;display:flex;justify-content:space-between;gap:14px;font-size:12.5px;color:rgba(255,255,255,.4);flex-wrap:wrap}
+
+/* ===== cart drawer ===== */
+.overlay{position:fixed;inset:0;background:rgba(51,34,42,.55);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .3s;z-index:200}
+.overlay.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:-440px;width:420px;max-width:94vw;height:100%;background:#fff;z-index:210;transition:right .38s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column;box-shadow:-20px 0 60px rgba(0,0,0,.18)}
+.drawer.open{right:0}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;padding:22px 26px;border-bottom:1px solid var(--line)}
+.drawer-head h3{font-size:26px}
+.x-btn{width:38px;height:38px;border-radius:50%;background:var(--bg);display:grid;place-items:center;font-size:19px;color:var(--muted);transition:all .2s}
+.x-btn:hover{background:var(--blush);color:var(--ink)}
+.free-ship{padding:16px 26px;background:var(--blush);font-size:13px;font-weight:600;color:var(--plum)}
+.free-ship .bar{height:6px;background:#fff;border-radius:3px;margin-top:9px;overflow:hidden}
+.free-ship .bar i{display:block;height:100%;background:var(--rose);border-radius:3px;transition:width .4s}
+.cart-items{flex:1;overflow-y:auto;padding:10px 26px}
+.citem{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.citem img{width:76px;height:76px;border-radius:14px;object-fit:cover;flex:none}
+.citem b{font-size:14px;line-height:1.35;display:block}
+.citem .cprice{font-weight:800;font-size:14.5px;margin-top:4px}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:999px;margin-top:8px}
+.qty button{width:30px;height:30px;font-size:16px;color:var(--plum);font-weight:800}
+.qty span{min-width:28px;text-align:center;font-weight:700;font-size:13.5px}
+.cdel{margin-left:auto;color:#C9B6BC;font-size:18px;align-self:flex-start;padding:2px 6px}
+.cdel:hover{color:var(--rose)}
+.cart-empty{text-align:center;padding:70px 20px;color:var(--muted)}
+.cart-empty .big{font-size:52px;margin-bottom:14px}
+.drawer-foot{border-top:1px solid var(--line);padding:20px 26px 26px}
+.promo-row{display:flex;gap:10px;margin-bottom:16px}
+.promo-row input{flex:1;border:1.5px solid var(--line);border-radius:12px;padding:11px 14px;outline:none;font-size:14px}
+.promo-row input:focus{border-color:var(--plum)}
+.promo-row button{border:1.5px solid var(--plum);color:var(--plum);border-radius:12px;padding:0 18px;font-weight:700;font-size:13.5px}
+.promo-ok{font-size:12.5px;color:var(--rose-2);font-weight:700;margin:-8px 0 12px}
+.crow{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:8px}
+.crow.total{font-size:19px;color:var(--ink);font-weight:800;margin:12px 0 18px}
+.checkout-btn{width:100%;padding:17px;border-radius:16px;background:var(--rose);color:#fff;font-weight:800;font-size:15.5px;transition:all .25s}
+.checkout-btn:hover{background:var(--rose-2);transform:translateY(-2px)}
+
+/* ===== modal checkout ===== */
+.modal{position:fixed;inset:0;z-index:220;display:grid;place-items:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s}
+.modal.show{opacity:1;pointer-events:auto}
+.modal-card{background:#fff;border-radius:26px;width:520px;max-width:100%;max-height:92vh;overflow-y:auto;padding:36px 38px;transform:translateY(24px);transition:transform .35s cubic-bezier(.22,1,.36,1);position:relative}
+.modal.show .modal-card{transform:none}
+.modal-card h3{font-size:28px;margin-bottom:6px}
+.modal-card .msub{color:var(--muted);font-size:14px;margin-bottom:24px}
+.field{margin-bottom:15px}
+.field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:#4A3A40}
+.field input,.field textarea,.field select{width:100%;border:1.5px solid var(--line);border-radius:13px;padding:13px 15px;outline:none;background:var(--bg);transition:border .2s;resize:vertical}
+.field input:focus,.field textarea:focus{border-color:var(--plum);background:#fff}
+.radio-row{display:flex;gap:10px}
+.radio-row label{flex:1;border:1.5px solid var(--line);border-radius:13px;padding:12px;text-align:center;font-size:13.5px;font-weight:700;cursor:pointer;background:var(--bg)}
+.radio-row input{display:none}
+.radio-row input:checked+span{color:var(--plum)}
+.radio-row label:has(input:checked){border-color:var(--plum);background:var(--blush)}
+.m-total{display:flex;justify-content:space-between;align-items:center;background:var(--blush);border-radius:14px;padding:15px 18px;margin:18px 0 20px;font-weight:800}
+.m-total span:last-child{font-size:19px;color:var(--plum)}
+.modal .x-btn{position:absolute;top:18px;right:18px}
+.success{display:none;text-align:center;padding:26px 6px 10px}
+.success .ok{width:76px;height:76px;border-radius:50%;background:var(--blush);display:grid;place-items:center;margin:0 auto 22px}
+.success .ok svg{width:36px;height:36px;color:var(--plum)}
+.success h3{margin-bottom:10px}
+.success p{color:var(--muted);font-size:14.5px;margin-bottom:8px}
+.success .num{font-weight:800;color:var(--plum);font-size:18px}
+
+/* ===== toast / float / mobile bar ===== */
+.toast{position:fixed;bottom:28px;left:50%;transform:translate(-50%,20px);background:var(--plum);color:#fff;padding:14px 26px;border-radius:999px;font-weight:700;font-size:14.5px;z-index:300;opacity:0;pointer-events:none;transition:all .35s;box-shadow:var(--shadow-lg);white-space:nowrap}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.to-top{position:fixed;right:26px;bottom:26px;width:50px;height:50px;border-radius:50%;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-md);display:grid;place-items:center;z-index:90;opacity:0;pointer-events:none;transition:all .3s;color:var(--plum)}
+.to-top.show{opacity:1;pointer-events:auto}
+.to-top:hover{transform:translateY(-4px)}
+.to-top svg{width:20px;height:20px}
+.mob-bar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:150;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);box-shadow:0 -6px 24px rgba(71,34,47,.12);padding:10px 14px;gap:10px}
+.mob-bar a,.mob-bar button{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:14px;font-weight:800;font-size:14px}
+.mob-bar .call{background:var(--blush);color:var(--plum)}
+.mob-bar .cta{background:var(--rose);color:#fff}
+
+/* ===== responsive ===== */
+@media (max-width:1080px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .ben-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-in{grid-template-columns:1fr;gap:60px}
+  .hero-photo{max-width:520px;margin:0 auto}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .srv-grid{grid-template-columns:1fr;max-width:560px;margin:0 auto}
+  .del-grid{grid-template-columns:1fr}
+  .cats-in{grid-template-columns:1fr;gap:50px}
+  .cat-photo{justify-self:start}
+}
+@media (max-width:860px){
+  nav{display:none;position:fixed;top:78px;left:0;right:0;background:var(--bg);flex-direction:column;padding:26px;gap:20px;box-shadow:var(--shadow-md);z-index:99}
+  nav.open{display:flex}
+  nav a{color:var(--ink)!important;font-size:17px}
+  .burger{display:grid}
+  .header-phone span{display:none}
+  .step-grid{grid-template-columns:1fr 1fr;gap:30px}
+  .rev-grid{grid-template-columns:1fr;max-width:560px}
+  .lead-card{grid-template-columns:1fr;padding:44px 32px}
+  .lead-note{grid-column:1}
+  .quiz-card{padding:32px 26px}
+  .qr-grid{grid-template-columns:1fr 1fr 1fr;gap:10px}
+  .rev-top{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:680px){
+  .grid{grid-template-columns:1fr 1fr;gap:16px}
+  .ben-grid{grid-template-columns:1fr}
+  .mob-bar{display:flex}
+  body{padding-bottom:88px}
+  .hero{padding:140px 0 80px}
+  .hero-photo .main{height:420px;border-radius:140px 140px 24px 24px}
+  .hero-badge{right:6px}
+  .hero-disc{width:92px;height:92px;font-size:10px;bottom:16px}
+  .hero-disc em{font-size:22px}
+  .htrust b{font-size:24px}
+  .quiz-opts{grid-template-columns:1fr}
+  .search input{width:100%}
+  .tool-right{width:100%}
+  .sort{flex:1}
+  .search{flex:1}
+  .pcard{padding:7px 7px 14px}
+  .pcard h3{font-size:13px}
+  .price{font-size:20px}
+  .f-grid{grid-template-columns:1fr}
+  .lead-form{flex-direction:column;border-radius:22px}
+  .lead-form button{width:100%}
+  .step-grid{grid-template-columns:1fr}
+  .sec-head{margin-bottom:34px}
+  .benefits,.catalog,.services,.steps,.delivery,.reviews,.faq{padding-top:64px;padding-bottom:64px}
+  .quiz{padding:80px 0}
+  .cats{padding:64px 0}
+  .btn{white-space:normal;text-align:center}
+  .hero-chip{flex-wrap:wrap;row-gap:4px}
+  #nl-badge-frame{bottom:88px!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="header">
+  <div class="container header-in">
+    <a href="#top" class="logo"><span>Saint&nbsp;<em>Floré</em></span></a>
+    <nav id="nav">
+      <a href="#catalog">Каталог</a>
+      <a href="#quiz">Подобрать букет</a>
+      <a href="#services">Услуги</a>
+      <a href="#delivery">Доставка</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <div class="header-act">
+      <a class="header-phone" href="tel:+79001234567">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>+7 (900) 123-45-67</span>
+      </a>
+      <button class="cart-btn" id="cartBtn" aria-label="Корзина">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Меню"><div><span></span><span></span><span></span></div></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="container hero-in">
+    <div>
+      <div class="hero-chip">🌸 Авторская флористика · <b>Санкт-Петербург</b></div>
+      <h1>Букеты, которые <em>скажут за вас</em></h1>
+      <p class="hero-sub">Собираем вручную под повод и характер, привозим по СПб за 2 часа и присылаем фото перед вручением.</p>
+      <div class="hero-cta">
+        <a href="#catalog" class="btn btn-solid">Выбрать букет
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#quiz" class="btn btn-line">Подобрать за 1 минуту</a>
+      </div>
+      <div class="hero-trust">
+        <div class="htrust"><b>2 часа</b><span>доставка по СПб<br>в день заказа</span></div>
+        <div class="htrust"><b>100%</b><span>фото букета<br>перед вручением</span></div>
+        <div class="htrust"><b>5–7 дней</b><span>стоит букет —<br>заменим, если завял</span></div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img class="main" src="img/crop/12.jpg" alt="Композиция с пионами — Saint Flore">
+      <div class="hero-badge">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <div><b>Фото перед доставкой</b><span style="font-size:12px;color:var(--muted)">пришлём в мессенджер</span></div>
+      </div>
+      <div class="hero-disc">−10% на первый заказ<em>SAINT10</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STRIP РАБОТ ============ -->
+<section class="strip-wrap" aria-label="Наши работы">
+  <div class="strip-label label" style="justify-content:center">Свежие работы из нашей группы</div>
+  <div class="strip"><div class="strip-track" id="strip"></div></div>
+</section>
+
+<!-- ============ BENEFITS ============ -->
+<section class="benefits" id="benefits">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <div class="label">Почему Saint Flore</div>
+      <h2 class="sec-title">Студия, а не конвейер</h2>
+      <p class="sec-sub">Каждый букет собираем вручную под ваш повод — и отвечаем за свежесть каждого стебля.</p>
+    </div>
+    <div class="ben-grid">
+      <div class="ben reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V8"/><path d="M12 8C12 4 9 1 4 1c0 5 3 7 8 7z"/><path d="M12 14c0-4 3-6 8-6 0 4-3 6-8 6z"/></svg></div>
+        <h3>Свежие поставки 2 раза в неделю</h3>
+        <p>Цветы едем напрямую с базы — в ваш букет попадают только свежие стебли.</p>
+      </div>
+      <div class="ben reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 11.5 2 2 4-4.5"/></svg></div>
+        <h3>Фото перед вручением</h3>
+        <p>Пришлём фото собранного букета в мессенджер. Не понравилось — пересоберём до доставки.</p>
+      </div>
+      <div class="ben reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3 4 14h7l-1 8 9-11h-7l1-8z"/></svg></div>
+        <h3>Доставка по СПб за 2 часа</h3>
+        <p>Курьеры везут букеты в термобоксах — цветы свежие и в жару, и в мороз. Бесплатно от 5 000 ₽.</p>
+      </div>
+      <div class="ben reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Флорист на связи</h3>
+        <p>Бесплатно поможем с выбором под повод, характер и бюджет — в сообщениях группы.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATEGORIES ============ -->
+<section class="cats" id="cats">
+  <div class="container cats-in">
+    <div>
+      <div class="sec-head reveal">
+        <div class="label">Категории</div>
+        <h2 class="sec-title">С чего начнём?</h2>
+      </div>
+      <div class="cat-list" id="catList"></div>
+    </div>
+    <div class="cat-photo reveal">
+      <div class="pol"><img src="img/crop/02.jpg" alt="Композиция из кустовых роз"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATALOG ============ -->
+<section class="catalog" id="catalog">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="label">Каталог</div>
+      <h2 class="sec-title">Авторские букеты и композиции</h2>
+      <p class="sec-sub">Цены — от 2 590 ₽. Каждый букет собираем после вашего заказа, поэтому цветы едут к вам самыми свежими, а состав можно подстроить под бюджет.</p>
+    </div>
+    <div class="quiz-chip" id="quizChip"><span id="quizChipText"></span><button id="quizChipReset" aria-label="Сбросить подбор">✕</button></div>
+    <div class="cat-toolbar reveal">
+      <div class="chips" id="chips"></div>
+      <div class="tool-right">
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" id="searchInput" placeholder="Найти: пионы, розы…">
+        </div>
+        <select class="sort" id="sortSel" aria-label="Сортировка">
+          <option value="pop">Популярные</option>
+          <option value="asc">Сначала дешевле</option>
+          <option value="desc">Сначала дороже</option>
+          <option value="name">По названию</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="more-wrap"><button class="btn btn-line" id="moreBtn">Показать ещё букеты</button></div>
+  </div>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section class="quiz" id="quiz">
+  <div class="container">
+    <div class="quiz-head reveal">
+      <div class="label">Быстрый подбор</div>
+      <h2>Хочу порадовать близкого, но <em>ничего не понимаю в цветах?</em></h2>
+      <p>Знакомо. Ответьте на 4 коротких вопроса — подберём букет под повод и бюджет, соберём и привезём за 2 часа.</p>
+    </div>
+    <div class="quiz-card reveal">
+      <div class="quiz-prog"><i id="quizProg"></i></div>
+      <div id="quizBody"></div>
+      <div class="quiz-nav" id="quizNav" style="display:none">
+        <button class="quiz-back" id="quizBack">← Назад</button>
+        <span style="font-size:13px;color:rgba(255,255,255,.5)">Шаг <b id="quizStep">1</b> из 4</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <div class="label">Услуги</div>
+      <h2 class="sec-title">Больше, чем букеты</h2>
+    </div>
+    <div class="srv-grid">
+      <div class="srv reveal">
+        <img loading="lazy" src="img/crop/09.jpg" alt="Букеты на заказ">
+        <div><h3>Букеты на заказ</h3><p>Соберём по фото или описанию за час. Анонимная доставка и фото перед вручением.</p><a href="#catalog">Оформить заказ →</a></div>
+      </div>
+      <div class="srv reveal">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1583753075968-1236ccb83c66?auto=format&fit=crop&w=760&q=70" alt="Оформление праздников">
+        <div><h3>Оформление праздников</h3><p>Фотозоны, банкеты и офисы: от идеи и эскиза до монтажа и уборки после события.</p><a href="#lead">Обсудить проект →</a></div>
+      </div>
+      <div class="srv reveal">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=760&q=70" alt="Подписка на цветы">
+        <div><h3>Подписка на цветы</h3><p>Свежий букет в дом или офис каждую неделю. Абонемент выгоднее разовых заказов на 15%.</p><a href="#lead">Рассчитать подписку →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STEPS ============ -->
+<section class="steps" id="steps">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <div class="label">Как это работает</div>
+      <h2 class="sec-title">От заказа до вручения — 4 шага</h2>
+    </div>
+    <div class="step-grid">
+      <div class="step reveal"><div class="num">01</div><h3>Выбираете букет</h3><p>В каталоге или просто напишите флористу — подберём под повод и бюджет.</p></div>
+      <div class="step reveal"><div class="num">02</div><h3>Подтверждаем заказ</h3><p>Флорист пришлёт фото-подтверждение состава и точное время доставки.</p></div>
+      <div class="step reveal"><div class="num">03</div><h3>Получаете за 2 часа</h3><p>Курьер бережно везёт по СПб. Перед вручением присылаем фото вам.</p></div>
+      <div class="step reveal"><div class="num">04</div><h3>Гарантия свежести</h3><p>Букет стоит 5–7 дней. Завял в первые сутки — заменим бесплатно.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DELIVERY ============ -->
+<section class="delivery" id="delivery">
+  <div class="container">
+    <div class="del-grid">
+      <div class="reveal">
+        <div class="sec-head">
+          <div class="label">Доставка и оплата</div>
+          <h2 class="sec-title">Привезём бережно — цветы это любят</h2>
+          <p class="sec-sub">Курьеры везут букеты в термобоксах и не оставляют на морозе. Букет доедет свежим даже в −20.</p>
+        </div>
+        <div class="tariff"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3 4 14h7l-1 8 9-11h-7l1-8z"/></svg></div><div><b>Курьером по СПб</b><span>В день заказа при оформлении до 18:00</span></div><div class="pr">490 ₽</div></div>
+        <div class="tariff"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div><b>Пригород (Пушкин, Колпино, Кронштадт)</b><span>На следующий день, интервал 2 часа</span></div><div class="pr">890 ₽</div></div>
+        <div class="tariff"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><b>Самовывоз со студии</b><span>Соберём букет к вашему приходу</span></div><div class="pr">бесплатно</div></div>
+      </div>
+      <div class="pay-note reveal">
+        <h3>Оплата и гарантии</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Картой, СБП или наличными курьеру — после осмотра букета</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Фото собранного букета — до доставки: пересоберём, если не понравится</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Завял в первые сутки — заменим бесплатно</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Юрлицам и компаниям — счёт и закрывающие документы</li>
+        </ul>
+        <p class="small">Бесплатная доставка от 5 000 ₽ по СПб · Заказ онлайн или в сообщениях группы</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="rev-top reveal">
+      <div>
+        <div class="label">Отзывы</div>
+        <h2 class="sec-title">Что пишут в группе ВКонтакте</h2>
+      </div>
+      <div class="rev-score">
+        <div class="big">4.9</div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <span>оценка в группе · 96% рекомендуют</span>
+        </div>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev reveal"><div class="q">“</div><div class="stars">★★★★★</div><p>Заказывали букет маме на юбилей — флорист прислала фото перед доставкой и поменяла ленту на любимый цвет. Мама была на седьмом небе!</p><div class="rev-who"><div class="ava">АК</div><div><b>Анна К.</b><span>авторский букет</span></div></div></div>
+      <div class="rev reveal"><div class="q">“</div><div class="stars">★★★★★</div><p>Нужен был букет к вечеру. Написала в сообщения группы в 14:00 — в 17:00 он уже был у подруги в офисе. Розы свежие, стоят шестой день.</p><div class="rev-who"><div class="ava">МП</div><div><b>Марина П.</b><span>монобукет роз</span></div></div></div>
+      <div class="rev reveal"><div class="q">“</div><div class="stars">★★★★★</div><p>Заказывали оформление дня рождения: фотозона и композиции на стол. Приехали вовремя, собрали за час. Красиво до мурашек, спасибо!</p><div class="rev-who"><div class="ava">ОМ</div><div><b>Ольга и Максим</b><span>оформление праздника</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <div class="label">Вопросы и ответы</div>
+      <h2 class="sec-title">Спрашивают перед первым заказом</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details><summary>Когда вы доставите заказ?<span class="pl">+</span></summary><p>По Санкт-Петербургу — в день заказа, если оформили до 18:00; доставка занимает около 2 часов. В пригород — на следующий день. Точный интервал флорист подтвердит в переписке.</p></details>
+      <details><summary>Сколько простоит букет?<span class="pl">+</span></summary><p>Цветы закупаем на базе дважды в неделю, поэтому букеты стоят 5–7 дней и дольше. Если букет завял в первые сутки — сфотографируйте и напишите нам, заменим бесплатно.</p></details>
+      <details><summary>Можно заказать букет по фото из интернета?<span class="pl">+</span></summary><p>Да, соберём по любому референсу. Флорист пришлёт фото собранного букета перед доставкой: если что-то захочется поменять — поменяем ещё до вручения.</p></details>
+      <details><summary>Как оплатить?<span class="pl">+</span></summary><p>Картой, СБП или наличными курьеру — после получения букета. Компаниям и агентствам выставим счёт и закрывающие документы.</p></details>
+      <details><summary>Можно сделать заказ анонимно?<span class="pl">+</span></summary><p>Да: отправителя не указываем, а перед вручением пришлём вам фото — вы будете знать, что всё прошло идеально.</p></details>
+      <details><summary>Можно заранее заказать на точную дату?<span class="pl">+</span></summary><p>Конечно: примем заказ заранее, соберём утром нужного дня из самых свежих цветов и привезём к точному времени. За день напомним о заказе в переписке.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEAD ============ -->
+<section class="lead" id="lead">
+  <div class="container">
+    <div class="lead-card reveal">
+      <div style="position:relative;z-index:2">
+        <div class="label" style="color:#EFC9CF">Первому заказу — скидка</div>
+        <h2>−10% на первый букет <em>+ бесплатная доставка</em></h2>
+        <p>Оставьте почту — пришлём промокод SAINT10 и короткий гайд «Как продлить жизнь букету до двух недель».</p>
+      </div>
+      <div>
+        <form class="lead-form" id="leadForm">
+          <input type="email" required placeholder="Ваша почта" aria-label="Электронная почта">
+          <button class="btn btn-solid" type="submit">Получить скидку</button>
+        </form>
+        <div class="lead-done" id="leadDone"><span class="ok">✓</span><span>Готово! Промокод уже летит на почту</span></div>
+        <p class="lead-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a href="#top" class="logo"><span>Saint&nbsp;<em>Floré</em></span></a>
+        <p>Авторская студия флористики в Санкт-Петербурге. Собираем букеты вручную и отвечаем за свежесть каждого стебля.</p>
+        <div class="f-social">
+          <a href="https://vk.com/saint_flore" aria-label="ВКонтакте"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 18.5c-6.6 0-10.4-4.5-10.5-12h3.3c.1 5.6 2.6 8 4.5 8.5V6.5h3.1v4.8c1.9-.2 3.9-2.4 4.6-4.8h3.1c-.5 3-2.7 5.2-4.2 6.1 1.5.8 4 2.6 4.9 5.9h-3.4c-.7-2.1-2.4-3.8-5-4v4h-.4z"/></svg></a>
+          <a href="#" aria-label="Телеграм"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.6c.2-1.1-.8-1.9-1.8-1.5L2.7 9.9c-1.1.4-1.1 2 0 2.4l4.3 1.4 1.6 5c.3 1 1.5 1.2 2.2.5l2.4-2.3 4.5 3.3c.8.6 2 .2 2.2-.9l2-14.7zM8.4 12.9l8.9-5.7c.3-.2.6.2.4.4l-7.3 6.8-.3 3-1.7-4.5z"/></svg></a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>Каталог</h4>
+        <a href="#catalog" data-cat="auth">Авторские букеты</a>
+        <a href="#catalog" data-cat="mono">Монобукеты</a>
+        <a href="#catalog" data-cat="box">Корзины и композиции</a>
+      </div>
+      <div class="f-col">
+        <h4>Покупателям</h4>
+        <a href="#delivery">Доставка и оплата</a>
+        <a href="#faq">Гарантия свежести</a>
+        <a href="#services">Подписка на цветы</a>
+        <a href="#quiz">Подбор букета</a>
+        <a href="#reviews">Отзывы</a>
+      </div>
+      <div class="f-col f-contact">
+        <h4>Контакты</h4>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Санкт-Петербург — доставка по всему городу<br><b>Ежедневно 9:00–21:00</b></span></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+79001234567"><b>+7 (900) 123-45-67</b><br>звонок бесплатный</a></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span>hello@saintflore.ru</span></div>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 Saint Flore — авторская флористика. Каждый букет собран с любовью. 💐</span>
+      <span>Не является публичной офертой · Концепт главной страницы</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Корзина">
+  <div class="drawer-head"><h3 class="serif">Корзина</h3><button class="x-btn" id="drawerClose">✕</button></div>
+  <div class="free-ship" id="freeShip"></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="drawer-foot" id="drawerFoot">
+    <div class="promo-row"><input type="text" id="promoInput" placeholder="Промокод (SAINT10)"><button id="promoBtn">Применить</button></div>
+    <div class="promo-ok" id="promoOk" style="display:none">Промокод применён: −10%</div>
+    <div class="crow"><span>Товары</span><span id="sumGoods">0 ₽</span></div>
+    <div class="crow"><span>Доставка</span><span id="sumShip">—</span></div>
+    <div class="crow total"><span>Итого</span><span id="sumTotal">0 ₽</span></div>
+    <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+  </div>
+</aside>
+
+<!-- ============ CHECKOUT MODAL ============ -->
+<div class="modal" id="checkoutModal">
+  <div class="modal-card">
+    <button class="x-btn" id="modalClose">✕</button>
+    <div id="checkoutForm">
+      <h3>Оформление заказа</h3>
+      <p class="msub">Оплата после получения — осмотрите букет, потом платите.</p>
+      <form id="orderForm">
+        <div class="field"><label>Ваше имя *</label><input type="text" required placeholder="Анна"></div>
+        <div class="field"><label>Телефон *</label><input type="tel" required placeholder="+7 (___) ___-__-__"></div>
+        <div class="field"><label>Способ получения</label>
+          <div class="radio-row">
+            <label><input type="radio" name="ship" value="Доставка курьером" checked><span>Доставка — 490 ₽</span></label>
+            <label><input type="radio" name="ship" value="Самовывоз"><span>Самовывоз со студии</span></label>
+          </div>
+        </div>
+        <div class="field" id="addrField"><label>Адрес доставки *</label><input type="text" placeholder="Улица, дом, квартира"></div>
+        <div class="field"><label>Комментарий</label><textarea rows="2" placeholder="Например: код домофона, удобное время"></textarea></div>
+        <div class="m-total"><span>К оплате</span><span id="modalTotal">0 ₽</span></div>
+        <button class="checkout-btn" type="submit" style="width:100%">Подтвердить заказ</button>
+        <p style="font-size:12px;color:var(--muted);margin-top:12px;text-align:center">Это демо-лендинг: заказ никуда не отправляется</p>
+      </form>
+    </div>
+    <div class="success" id="orderSuccess">
+      <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <h3>Заказ принят!</h3>
+      <p>Номер заказа <span class="num" id="orderNum">SF-1042</span></p>
+      <p>Флорист напишет вам в мессенджер в течение 15 минут, чтобы согласовать состав и время доставки.</p>
+      <button class="btn btn-line" id="successDone" style="margin-top:18px">Отлично!</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<button class="to-top" id="toTop" aria-label="Наверх"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg></button>
+<div class="mob-bar">
+  <a class="call" href="tel:+79001234567">📞 Позвонить</a>
+  <a class="cta" href="#catalog">💐 Выбрать букет</a>
+</div>
+
+<script>
+/* ================= DATA ================= */
+const IMGS = {
+  auth:['img/crop/04.jpg','img/crop/09.jpg','img/crop/11.jpg','img/crop/06.jpg','img/crop/01.jpg'],
+  mono:['img/crop/05.jpg','img/crop/08.jpg'],
+  box:['img/crop/02.jpg','img/crop/03.jpg','img/crop/07.jpg','img/crop/10.jpg','img/crop/12.jpg']
+};
+/* n:название, l:состав, c:категория(auth/mono/box), p:цена, o:старая цена, t:тег(hit/new), h:размер, im:фото из папки img */
+const P = [
+  {n:'Букет «Петербургский»',l:'Кустовые розы, хризантемы, лаванда — матовая бумага с золотом',c:'auth',p:4790,t:'hit',h:'40–50 см',im:'img/crop/04.jpg'},
+  {n:'Букет «Яркий день»',l:'Пионы, хризантемы, астры и агапантус',c:'auth',p:4990,t:'new',h:'40–50 см',im:'img/crop/09.jpg'},
+  {n:'Букет «Северное сияние»',l:'Белые хризантемы и ирисы, розовая лента',c:'auth',p:3390,h:'35–45 см',im:'img/crop/11.jpg'},
+  {n:'Букет «Ирисы и хризантемы»',l:'Белые хризантемы, синие ирисы, жёлтая лента',c:'auth',p:3590,h:'35–45 см',im:'img/crop/06.jpg'},
+  {n:'Букет «Голубая лагуна»',l:'Авторский микс в голубой матовой бумаге',c:'auth',p:4290,h:'35–45 см',im:'img/crop/01.jpg'},
+  {n:'Монобукет белых тюльпанов, 51 шт',l:'Газетная бумага, зелёная лента',c:'mono',p:3990,t:'hit',h:'45–55 см',im:'img/crop/05.jpg'},
+  {n:'Монобукет белых хризантем',l:'Винтажный крафт, атласная лента',c:'mono',p:2590,h:'35–45 см',im:'img/crop/08.jpg'},
+  {n:'Композиция из кустовых роз в кашпо',l:'Розовые розы и зелёная гвоздика',c:'box',p:3490,h:'25–30 см',im:'img/crop/02.jpg'},
+  {n:'Корзина «Красный бархат»',l:'Красные розы, белая эустома, хризантемы',c:'box',p:4990,t:'hit',h:'30–35 см',im:'img/crop/03.jpg'},
+  {n:'Корзина «Нежность»',l:'Кремовые розы и альстромерии в корзине',c:'box',p:4490,h:'30–35 см',im:'img/crop/07.jpg'},
+  {n:'Корзина «I Love You»',l:'Орхидеи цимбидиум, хризантемы, альстромерии',c:'box',p:5990,h:'30–35 см',im:'img/crop/10.jpg'},
+  {n:'Композиция с пионами в сумке',l:'Розовые пионы, орхидеи, эрингиум — брендированная сумка',c:'box',p:6990,t:'new',h:'30–40 см',im:'img/crop/12.jpg'}
+];
+const CATS = {
+  all:{t:'Все букеты'},
+  auth:{t:'Авторские букеты'},
+  mono:{t:'Монобукеты'},
+  box:{t:'Корзины и композиции'}
+};
+const RUB = n => n.toLocaleString('ru-RU')+' ₽';
+const imgFor = p => { if(p.im) return p.im; const pool = IMGS[p.c]; const idx = P.indexOf(p); return pool[idx % pool.length]; };
+const state = {cat:'all',q:'',sort:'pop',shown:16,quiz:null};
+let cart = {}; let favs = []; let promo = false;
+
+/* ================= ICONS ================= */
+const IC = {
+  plus:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>',
+  check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>',
+  size:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 12l4-4M3 12l4 4M21 12l-4-4M21 12l-4 4"/></svg>',
+  flower:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><circle cx="8" cy="11" r="3.2"/><circle cx="16" cy="11" r="3.2"/><path d="M12 14v8"/><path d="M12 19c2.5 0 4-1.5 4-3.5"/><path d="M12 19c-2.5 0-4-1.5-4-3.5"/></svg>'
+};
+const tagLabel = t => t==='hit'?'Хит':(t==='new'?'Новинка':'Скидка');
+
+/* ================= CATALOG ================= */
+const gridEl = document.getElementById('grid');
+const moreBtn = document.getElementById('moreBtn');
+function filtered(){
+  let list = P.filter(p => (state.cat==='all'||p.c===state.cat));
+  if(state.q){ const q=state.q.toLowerCase(); list = list.filter(p=>(p.n+' '+p.l).toLowerCase().includes(q)); }
+  if(state.quiz){
+    if(state.quiz.max) list = list.filter(p=>p.p<=state.quiz.max);
+    if(state.quiz.cats && state.quiz.cats.length) list = list.filter(p=>state.quiz.cats.includes(p.c));
+  }
+  if(state.sort==='asc') list.sort((a,b)=>a.p-b.p);
+  else if(state.sort==='desc') list.sort((a,b)=>b.p-a.p);
+  else if(state.sort==='name') list.sort((a,b)=>a.n.localeCompare(b.n,'ru'));
+  return list;
+}
+function cardHTML(p){
+  const inCart = !!cart[p.n];
+  return `<article class="pcard">
+    <div class="pcard-img">
+      ${p.t?`<span class="ptag ${p.t}">${tagLabel(p.t)}</span>`:''}
+      <button class="pfav ${favs.includes(p.n)?'on':''}" data-fav="${p.n}" aria-label="В избранное"><svg viewBox="0 0 24 24" fill="${favs.includes(p.n)?'currentColor':'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+      <img loading="lazy" src="${imgFor(p)}" alt="${p.n}">
+    </div>
+    <div class="pcard-b">
+      <h3>${p.n}</h3>
+      <div class="lat">${p.l}</div>
+      <div class="pmeta"><span>${IC.size} ${p.h}</span></div>
+      <div class="prow">
+        <div class="price">${RUB(p.p)}${p.o?`<s>${RUB(p.o)}</s>`:''}</div>
+        <button class="add ${inCart?'in':''}" data-add="${p.n}">${inCart?IC.check+' В корзине':'В корзину'}</button>
+      </div>
+    </div>
+  </article>`;
+}
+function renderGrid(){
+  const list = filtered();
+  const shown = list.slice(0,state.shown);
+  gridEl.innerHTML = shown.length ? shown.map(cardHTML).join('') : '<div class="grid-empty">Ничего не нашлось 😔 Попробуйте изменить фильтры или поискать по-другому.</div>';
+  moreBtn.style.display = list.length>state.shown ? 'inline-flex':'none';
+}
+function renderChips(){
+  const counts = {}; P.forEach(p=>counts[p.c]=(counts[p.c]||0)+1);
+  document.getElementById('chips').innerHTML = Object.keys(CATS).map(k=>
+    `<button class="chip ${state.cat===k?'active':''}" data-cat="${k}">${CATS[k].t}${k==='all'?` <small>${P.length}</small>`:` <small>${counts[k]||0}</small>`}</button>`).join('');
+}
+function renderCatList(){
+  document.getElementById('catList').innerHTML = ['auth','mono','box'].map(k=>
+    `<div class="cat-row reveal" data-cat="${k}"><b>${CATS[k].t}</b><small>${P.filter(p=>p.c===k).length} позиций</small><span class="arr">⟶</span></div>`).join('');
+}
+document.getElementById('chips').addEventListener('click',e=>{
+  const b = e.target.closest('[data-cat]'); if(!b) return;
+  state.cat = b.dataset.cat; state.shown = 16; renderChips(); renderGrid();
+});
+document.getElementById('catList').addEventListener('click',e=>{
+  const t = e.target.closest('[data-cat]'); if(!t) return;
+  state.cat = t.dataset.cat; state.shown=16; renderChips(); renderGrid();
+  document.getElementById('catalog').scrollIntoView({behavior:'smooth'});
+});
+document.querySelectorAll('.f-col [data-cat]').forEach(a=>a.addEventListener('click',()=>{ state.cat=a.dataset.cat; state.shown=16; renderChips(); renderGrid(); }));
+document.getElementById('searchInput').addEventListener('input',e=>{ state.q=e.target.value.trim(); state.shown=16; renderGrid(); });
+document.getElementById('sortSel').addEventListener('change',e=>{ state.sort=e.target.value; renderGrid(); });
+moreBtn.addEventListener('click',()=>{ state.shown+=16; renderGrid(); });
+
+/* ================= CART ================= */
+const drawer = document.getElementById('drawer'), overlay = document.getElementById('overlay');
+const FREE = 5000, SHIP = 490;
+function saveCart(){ try{localStorage.setItem('sf_cart',JSON.stringify(cart));}catch(e){} }
+function addToCart(name){
+  cart[name] = (cart[name]||0)+1; saveCart(); renderCart();
+  toast(`«${name}» в корзине 💐`);
+  const btn = document.querySelector(`[data-add="${CSS.escape(name)}"]`);
+  if(btn){ btn.classList.add('in'); btn.innerHTML = IC.check+' В корзине'; }
+}
+function removeFromCart(name){ delete cart[name]; saveCart(); renderCart(); renderGrid(); }
+function cartTotals(){
+  let goods = 0;
+  Object.keys(cart).forEach(n=>{ const p=P.find(x=>x.n===n); goods += p.p*cart[n]; });
+  let promoVal = promo ? Math.round(goods*0.1) : 0;
+  const ship = goods>=FREE || goods===0 ? 0 : SHIP;
+  return {goods,promoVal,ship,total:goods-promoVal+ship};
+}
+function renderCart(){
+  const count = Object.values(cart).reduce((a,b)=>a+b,0);
+  document.getElementById('cartCount').textContent = count;
+  const items = document.getElementById('cartItems');
+  const names = Object.keys(cart);
+  if(!names.length){
+    items.innerHTML = '<div class="cart-empty"><div class="big">🌸</div><b>Корзина пока пустая</b><p style="font-size:13.5px;margin-top:6px">Загляните в каталог — там авторские букеты и композиции</p></div>';
+    document.getElementById('freeShip').style.display='none';
+    document.getElementById('drawerFoot').style.display='none';
+  } else {
+    document.getElementById('freeShip').style.display='block';
+    document.getElementById('drawerFoot').style.display='block';
+    items.innerHTML = names.map(n=>{
+      const p = P.find(x=>x.n===n);
+      return `<div class="citem">
+        <img src="${imgFor(p)}" alt="">
+        <div style="flex:1">
+          <b>${p.n}</b>
+          <div class="cprice">${RUB(p.p)}</div>
+          <div class="qty"><button data-minus="${p.n}">−</button><span>${cart[n]}</span><button data-plus="${p.n}">+</button></div>
+        </div>
+        <button class="cdel" data-del="${p.n}">✕</button>
+      </div>`;
+    }).join('');
+    const t = cartTotals(), left = FREE-t.goods;
+    const fs = document.getElementById('freeShip');
+    fs.innerHTML = left>0 ? `До бесплатной доставки осталось <b>${RUB(left)}</b><div class="bar"><i style="width:${Math.min(100,t.goods/FREE*100)}%"></i></div>` : `🚚 Доставка бесплатная — вы набрали от ${RUB(FREE)}!`;
+    document.getElementById('sumGoods').textContent = RUB(t.goods);
+    document.getElementById('sumShip').textContent = t.ship?RUB(t.ship):'бесплатно';
+    document.getElementById('sumTotal').textContent = RUB(t.total);
+    document.getElementById('modalTotal').textContent = RUB(t.total);
+  }
+}
+document.getElementById('cartItems').addEventListener('click',e=>{
+  const plus = e.target.closest('[data-plus]'), minus = e.target.closest('[data-minus]'), del = e.target.closest('[data-del]');
+  if(plus){ cart[plus.dataset.plus]++; saveCart(); renderCart(); }
+  if(minus){ const n=minus.dataset.minus; cart[n]--; if(cart[n]<=0) delete cart[n]; saveCart(); renderCart(); renderGrid(); }
+  if(del){ removeFromCart(del.dataset.del); }
+});
+function openDrawer(){ drawer.classList.add('open'); overlay.classList.add('show'); document.body.style.overflow='hidden'; }
+function closeDrawer(){ drawer.classList.remove('open'); overlay.classList.remove('show'); document.body.style.overflow=''; }
+document.getElementById('cartBtn').addEventListener('click',openDrawer);
+document.getElementById('drawerClose').addEventListener('click',closeDrawer);
+overlay.addEventListener('click',()=>{ closeDrawer(); closeCheckout(); });
+document.getElementById('promoBtn').addEventListener('click',()=>{
+  const v = document.getElementById('promoInput').value.trim().toUpperCase();
+  if(v==='SAINT10'){ promo=true; document.getElementById('promoOk').style.display='block'; renderCart(); toast('Промокод SAINT10 активирован 🎉'); }
+  else toast('Такого промокода нет. Попробуйте SAINT10');
+});
+gridEl.addEventListener('click',e=>{
+  const add = e.target.closest('[data-add]'), fv = e.target.closest('[data-fav]');
+  if(add){ addToCart(add.dataset.add); }
+  if(fv){ const n=fv.dataset.fav;
+    if(favs.includes(n)){ favs=favs.filter(x=>x!==n); fv.classList.remove('on'); } else { favs.push(n); fv.classList.add('on'); toast('Добавлено в избранное 💗'); } }
+});
+
+/* ================= CHECKOUT ================= */
+const modal = document.getElementById('checkoutModal');
+function openCheckout(){
+  if(!Object.keys(cart).length){ toast('Сначала добавьте букет в корзину 💐'); return; }
+  closeDrawer(); renderCart(); modal.classList.add('show'); document.body.style.overflow='hidden';
+}
+function closeCheckout(){ modal.classList.remove('show'); document.body.style.overflow=''; }
+document.getElementById('checkoutBtn').addEventListener('click',openCheckout);
+document.getElementById('modalClose').addEventListener('click',closeCheckout);
+document.querySelectorAll('input[name="ship"]').forEach(r=>r.addEventListener('change',()=>{
+  const val = document.querySelector('input[name="ship"]:checked').value;
+  document.getElementById('addrField').style.display = val==='Самовывоз' ? 'none':'block';
+}));
+document.getElementById('orderForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  document.getElementById('checkoutForm').style.display='none';
+  document.getElementById('orderSuccess').style.display='block';
+  document.getElementById('orderNum').textContent = 'SF-'+(1000+Math.floor(Math.random()*9000));
+});
+document.getElementById('successDone').addEventListener('click',()=>{
+  cart={}; promo=false; saveCart(); renderCart(); renderGrid(); closeCheckout();
+  document.getElementById('checkoutForm').style.display='block';
+  document.getElementById('orderSuccess').style.display='none';
+  document.getElementById('orderForm').reset();
+});
+
+/* ================= QUIZ ================= */
+const QUIZ = [
+  {q:'По какому поводу ищете букет?',opts:[
+    {t:'День рождения',s:'Яркий букет для виновника торжества',k:'bday'},
+    {t:'Романтика',s:'Признание без лишних слов',k:'love'},
+    {t:'Бизнес и коллеги',s:'Строго, со вкусом, к месту',k:'biz'},
+    {t:'Просто порадовать',s:'Без повода — так даже лучше',k:'any'}]},
+  {q:'Какой у вас бюджет?',opts:[
+    {t:'До 3 000 ₽',s:'Монобукеты и компактные композиции',k:'3000'},
+    {t:'3 000 – 6 000 ₽',s:'Большинство авторских букетов',k:'6000'},
+    {t:'Больше 6 000 ₽',s:'Премиум-составы и оформление',k:'0'}]},
+  {q:'Какие цветы ближе?',opts:[
+    {t:'Розы и пионы',s:'Классика, которая не подводит',k:'classic'},
+    {t:'Нежные и полевые',s:'Гортензия, эустома, лаванда',k:'tender'},
+    {t:'Экзотика и орхидеи',s:'Для тех, кто видел всё',k:'exotic'},
+    {t:'Доверюсь флористу',s:'Соберём на своё усмотрение',k:'any'}]},
+  {q:'Какой формат ближе?',opts:[
+    {t:'Букет в бумаге',s:'Классическая ручная сборка',k:'hand'},
+    {t:'Корзина или кашпо',s:'Композиция, которую не надо ставить в воду',k:'box'},
+    {t:'Посоветуйте',s:'Подберём под повод',k:'any'}]}
+];
+let qStep = 0; const qAns = [];
+const quizBody = document.getElementById('quizBody'), quizProg = document.getElementById('quizProg'), quizNav = document.getElementById('quizNav');
+function renderQuiz(){
+  if(qStep < QUIZ.length){
+    const s = QUIZ[qStep];
+    quizBody.innerHTML = `<div class="quiz-q">${s.q}</div><div class="quiz-opts">${s.opts.map((o,i)=>
+      `<button class="qopt ${qAns[qStep]===o.k?'sel':''}" data-i="${i}"><b>${o.t}</b><span>${o.s}</span></button>`).join('')}</div>`;
+    quizProg.style.width = (qStep/QUIZ.length*100)+'%';
+    quizNav.style.display = 'flex';
+    document.getElementById('quizStep').textContent = qStep+1;
+  } else { quizResult(); }
+}
+quizBody.addEventListener('click',e=>{
+  const b = e.target.closest('.qopt'); if(!b) return;
+  qAns[qStep] = QUIZ[qStep].opts[+b.dataset.i].k;
+  qStep++; renderQuiz();
+  setTimeout(()=>document.querySelector('.quiz-card').scrollIntoView({behavior:'smooth',block:'center'}),80);
+});
+document.getElementById('quizBack').addEventListener('click',()=>{ if(qStep>0){ qStep--; renderQuiz(); } });
+function quizResult(){
+  quizProg.style.width = '100%';
+  quizNav.style.display = 'none';
+  const [purpose,budget,style,format] = qAns;
+  let pool = P.slice();
+  if(budget==='3000') pool = pool.filter(p=>p.p<=3000);
+  if(budget==='6000') pool = pool.filter(p=>p.p<=6000);
+  if(style==='classic') pool = pool.filter(p=>p.c==='auth'||p.c==='mono');
+  if(style==='tender') pool = pool.filter(p=>p.c==='auth'||p.c==='mono'||p.c==='box');
+  if(style==='exotic') pool = pool.filter(p=>p.c==='box');
+  if(format==='hand') pool = pool.filter(p=>p.c!=='box');
+  if(format==='box') pool = pool.filter(p=>p.c==='box');
+  const score = p => (purpose==='love'&&p.c==='auth'?2:0)+(purpose==='biz'&&(p.c==='box')?2:0)+(p.t==='hit'?1:0)+(p.t==='new'?1:0);
+  pool.sort((a,b)=>score(b)-score(a));
+  const top = pool.slice(0,3);
+  quizBody.innerHTML = `<div class="quiz-res">
+    ${top.length
+      ? `<div class="quiz-q">Мы подобрали ${pool.length>3?pool.length+' вариантов':'вам букет'} 💐</div>
+    <div class="quiz-res-note">Эти букеты соберём под ваш повод и бюджет. Ниже — три фаворита:</div>
+    <div class="qr-grid">${top.map(p=>`<div class="qr-card"><img src="${imgFor(p)}" alt="${p.n}"><div><b>${p.n}</b><span>${RUB(p.p)}</span></div></div>`).join('')}</div>`
+      : `<div class="quiz-q">Под такой запрос ничего не нашлось 😔</div>
+    <div class="quiz-res-note">Ничего страшного: флорист соберёт букет под ваш повод и бюджет на заказ. Загляните в каталог или напишите нам.</div>`}
+    <div style="display:flex;gap:12px;margin-top:26px;flex-wrap:wrap">
+      <button class="btn btn-solid" id="quizToCatalog">Смотреть в каталоге</button>
+      <a class="btn btn-line-light" href="#lead">Спросить флориста</a>
+    </div>
+  </div>`;
+  const btn = document.getElementById('quizToCatalog');
+  if(btn) btn.addEventListener('click',()=>{
+    if(!top.length){ document.getElementById('catalog').scrollIntoView({behavior:'smooth'}); return; }
+    state.quiz = {max: budget==='3000'?3000:(budget==='6000'?6000:null), cats: format==='box'?['box']:(format==='hand'?['auth','mono']:null)};
+    state.cat='all'; state.shown=16;
+    const chip = document.getElementById('quizChip');
+    document.getElementById('quizChipText').textContent = '💐 Ваш подбор: '+(state.quiz.max?'до '+RUB(state.quiz.max)+' · ':'')+'отобрано по вашим ответам';
+    chip.classList.add('show');
+    document.getElementById('quizChipReset').onclick = ()=>{ state.quiz=null; chip.classList.remove('show'); renderGrid(); };
+    renderChips(); renderGrid();
+    document.getElementById('catalog').scrollIntoView({behavior:'smooth'});
+  });
+}
+renderQuiz();
+
+/* ================= STRIP ================= */
+const strip = document.getElementById('strip');
+strip.innerHTML = Array(2).fill(P.map(p=>`<img loading="lazy" src="${imgFor(p)}" alt="${p.n}">`).join('')).join('');
+
+/* ================= UI MISC ================= */
+let toastTimer;
+function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove('show'),2600); }
+const header = document.getElementById('header'), toTop = document.getElementById('toTop');
+window.addEventListener('scroll',()=>{
+  header.classList.toggle('scrolled', window.scrollY>40);
+  toTop.classList.toggle('show', window.scrollY>700);
+},{passive:true});
+toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+document.getElementById('burger').addEventListener('click',()=>document.getElementById('nav').classList.toggle('open'));
+document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+document.getElementById('leadForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  document.getElementById('leadForm').style.display='none';
+  document.getElementById('leadDone').style.display='flex';
+});
+const io = new IntersectionObserver(es=>es.forEach(x=>{ if(x.isIntersecting){ x.target.classList.add('in'); io.unobserve(x.target);} }),{threshold:.12});
+function watchReveals(){ document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el)); }
+const mqPh = window.matchMedia('(max-width:680px)');
+const searchEl = document.getElementById('searchInput');
+const setPh = () => searchEl.placeholder = mqPh.matches ? 'Поиск букета' : 'Найти: пионы, розы…';
+setPh(); if (mqPh.addEventListener) mqPh.addEventListener('change', setPh);
+renderChips(); renderCatList(); renderGrid(); renderCart(); watchReveals();
+window.addEventListener('load',watchReveals);
+</script>
+</body>
+</html>
